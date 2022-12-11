@@ -1,5 +1,6 @@
 package changebranch;
 
+import amendcommit.AmendController;
 import controlversion.ControlVersionController;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -179,6 +180,12 @@ public class Controller {
 
                 model.doCommit(view.getMessageForCommit().getText());
 
+
+            } else if(actionEvent.getSource()==view.getDoAmend()){
+
+                log.info("Wybranie przycisku wykonania zmiany nazwy commita");
+
+                new AmendController();
 
             } else if(actionEvent.getSource()==view.getDoPushButton()){
 
