@@ -40,6 +40,7 @@ public class ControlVersionView extends JDialog {
         setAlwaysOnTop(true);
         setFocusableWindowState(true);
         setBounds(80, 300, 450, 151);
+        setLocationRelativeTo(null);
         getContentPane().setLayout(new BorderLayout());
         JPanel contentPanel = new JPanel();
         contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
