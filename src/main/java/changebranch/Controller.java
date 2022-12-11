@@ -1,6 +1,6 @@
 package changebranch;
 
-
+import controlversion.ControlVersionController;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,7 +31,7 @@ public class Controller {
 
         view.addViewListener(new actionListenerForView());
 
-        log.info("Wykonanie konstruktora klasy Controller");
+        log.info("Wykonano konstruktor klasy Controller");
 
 
 
@@ -166,6 +166,11 @@ public class Controller {
                 model.getUncommittedList().clear();
                 model.getUntrackedList().clear();
 
+            } else if (actionEvent.getSource() == view.getButtonAddChanges()) {
+
+                log.info("Wybranie przycisku dodaj zmiany");
+
+                new ControlVersionController(model.getPathToRepo());
 
 
             } else if (actionEvent.getSource() == view.getConfirmCommit()) {
@@ -173,7 +178,6 @@ public class Controller {
                 log.info("Wybranie przycisku wykonania commita");
 
                 model.doCommit(view.getMessageForCommit().getText());
-
 
 
             } else if(actionEvent.getSource()==view.getDoPushButton()){
