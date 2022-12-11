@@ -31,7 +31,7 @@ public class Controller {
 
         view.addViewListener(new actionListenerForView());
 
-        log.info("Wykonano konstruktor klasy Controller");
+        log.info("Wykonanie konstruktora klasy Controller");
 
 
 
