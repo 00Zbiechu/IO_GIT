@@ -43,9 +43,11 @@ public class View extends JFrame {
 
         setVisible(true);
         setTitle("gitSwitcher");
+        setLocationRelativeTo(null);
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 401, 527);
+        setLocationRelativeTo(null);
         JPanel contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);

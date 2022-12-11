@@ -25,6 +25,7 @@ public class AmendView extends JDialog {
         setFocusableWindowState(true);
 
         setBounds(100, 100, 450, 149);
+        setLocationRelativeTo(null);
         getContentPane().setLayout(null);
         {
             textFieldMessageForAmend = new JTextField();
